@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "face-id-offline.Android", "face-id-offline.Android\face-id-offline.Android.csproj", "{91F68500-FEE5-4B66-8C48-E9A6FD73266A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceIdOffline.Android", "face-id-offline.Android\FaceIdOffline.Android.csproj", "{91F68500-FEE5-4B66-8C48-E9A6FD73266A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "face-id-offline.iOS", "face-id-offline.iOS\face-id-offline.iOS.csproj", "{06E757BD-8ADC-40DE-BB9C-20C1A68C1932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "face-id-offline", "face-id-offline\face-id-offline.csproj", "{B61011B9-C318-40FF-AD65-D93CB670683D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceIdOffline", "face-id-offline\FaceIdOffline.csproj", "{B61011B9-C318-40FF-AD65-D93CB670683D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

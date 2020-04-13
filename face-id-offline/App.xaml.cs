@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace face_id_offline
+namespace FaceIdOffline
 {
     public partial class App : Application
     {
