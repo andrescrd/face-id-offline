@@ -6,11 +6,9 @@
              mc:Ignorable="d"
              x:Class="FaceIdOffline.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="0" Spacing="10">
+        <Button Text="Pick photo" HeightRequest="60" Clicked="Button_Clicked" />
+        <Label x:Name="classify"></Label>
     </StackLayout>
 
 </ContentPage>

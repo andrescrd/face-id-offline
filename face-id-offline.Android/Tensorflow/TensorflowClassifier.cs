@@ -15,7 +15,9 @@ using FaceIdOffline.Classifier;
 using Java.IO;
 using Java.Nio;
 using Java.Nio.Channels;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(FaceIdOffline.Droid.Tensorflow.TensorflowClassifier))]
 namespace FaceIdOffline.Droid.Tensorflow
 {
     public class TensorflowClassifier : IClassifier
@@ -40,7 +42,7 @@ namespace FaceIdOffline.Droid.Tensorflow
 
             var byteBuffer = GetPhotoAsByteBuffer(bytes, width, height);
 
-            var sr = new StreamReader(Application.Context.Assets.Open("labels.txt"));
+            var sr = new StreamReader(Android.App.Application.Context.Assets.Open("labels.txt"));
             var labels = sr.ReadToEnd().Split('\n').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
 
             var outputLocations = new float[1][] { new float[labels.Count] };
@@ -64,7 +66,7 @@ namespace FaceIdOffline.Droid.Tensorflow
 
         private MappedByteBuffer GetModelAsMappedByteBuffer()
         {
-            var assetDescriptor = Application.Context.Assets.OpenFd("model.tflite");
+            var assetDescriptor = Android.App.Application.Context.Assets.OpenFd("model.tflite");
             var inputStream = new FileInputStream(assetDescriptor.FileDescriptor);
 
             var mappedByteBuffer = inputStream.Channel.Map(FileChannel.MapMode.ReadOnly, assetDescriptor.StartOffset, assetDescriptor.DeclaredLength);
