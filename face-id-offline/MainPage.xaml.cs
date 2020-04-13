@@ -25,13 +25,6 @@ namespace FaceIdOffline
             offlineClassifier = DependencyService.Get<IClassifier>();
         }
 
-        private async Task Button_Clicked(object sender, EventArgs e)
-        {
-            var file = await CrossMedia.Current.PickPhotoAsync();
-
-            await HandlePhoto(file);
-        }
-
         private async Task HandlePhoto(MediaFile file)
         {
             var stream = file.GetStreamWithImageRotatedForExternalStorage();
@@ -63,6 +56,14 @@ namespace FaceIdOffline
 
             var classifier = (IClassifier)sender;
             classifier.ClassificationCompleted -= Classifier_ClassificationCompleted;
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            var file = await CrossMedia.Current.PickPhotoAsync();
+
+            await HandlePhoto(file);
+
         }
     }
 }
